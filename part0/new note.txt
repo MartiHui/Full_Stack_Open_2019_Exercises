@@ -1,0 +1,12 @@
+note over browser:
+the user clicks the "Save" button
+a string of text is sent to the server
+end note
+browser->server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note
+note over server:
+the server creates a new JSON element with the string received as "content"
+and the current date as "date" and adds it to the list of notes
+end note
+server-->browser: HTTP status code 302 (redirect) at location "/notes"
+note over browser:
+the browser redirects to "/notes", which is the current page

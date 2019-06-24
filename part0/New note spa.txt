@@ -1,0 +1,13 @@
+note over browser:
+the user clicks the "Save" button
+a JSON element is created with the text in the form and the current date
+the new element is added to the local list of notes
+a function is called to redraw the notes
+the new JSON elements is sent to the server
+end note
+
+browser->server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
+note over server:
+the server adds the new JSON element to the list
+end note
+server-->browser: HTML status code 201 (created)
